@@ -28,10 +28,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'accounts',
+    'checkout',
     'cities',
     'itineraries',
     'products',
-    'checkout'
 ]
 
 MIDDLEWARE = [
