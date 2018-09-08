@@ -121,12 +121,11 @@ STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles/')
 ]
-# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-cdn-local')
 
 MEDIAFILES_LOCATION = 'media'
 MEDIAFILES_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
-# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+MEDIA_ROOT = '/media/'
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
