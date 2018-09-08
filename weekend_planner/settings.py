@@ -29,10 +29,10 @@ INSTALLED_APPS = [
     'storages',
     'rest_framework',
     'accounts',
-    'checkout',
     'cities',
     'itineraries',
     'products',
+    'checkout',
 ]
 
 MIDDLEWARE = [
