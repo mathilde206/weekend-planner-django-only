@@ -4,3 +4,4 @@ accounts/migrations
 checkout/migrations
 itineraries/migrations
 staticfiles
+cities/migrations
