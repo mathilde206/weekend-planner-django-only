@@ -15,7 +15,7 @@ else:
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'https://europe-weekend-planner.herokuapp.com',
+    '.herokuapp.com',
 ]
 
 INSTALLED_APPS = [
