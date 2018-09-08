@@ -123,7 +123,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIAFILES_LOCATION = 'media'
-MEDIAFILES_STORAGE = 'custom_storages.MediaStorage'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 MEDIA_ROOT = '/media/'
 
