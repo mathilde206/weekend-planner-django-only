@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'storages',
     'rest_framework',
     'accounts',
     'checkout',
@@ -117,15 +118,15 @@ AWS_S3_CUSTOM_DOMAIN = '{bucket}.s3.amazonaws.com'.format(bucket=AWS_STORAGE_BUC
 STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles/')
-]
-# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-cdn-local')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'staticfiles/')
+# ]
+# # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-cdn-local')
 
 MEDIAFILES_LOCATION = 'media'
 MEDIAFILES_STORAGE = 'custom_storages.MediaStorage'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
