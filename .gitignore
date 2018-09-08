@@ -1,0 +1,7 @@
+env.py
+__pycache__
+accounts/migrations
+checkout/migrations
+__init__.py
+itineraries/migrations
+staticfiles
