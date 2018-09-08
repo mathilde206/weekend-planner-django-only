@@ -1,1 +1,1 @@
-web: gunicorn src.weekend_planner.wsgi:application
+web: gunicorn weekend_planner.wsgi:application
