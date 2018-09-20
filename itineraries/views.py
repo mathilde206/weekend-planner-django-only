@@ -148,11 +148,9 @@ class ItineraryUpdateLikes(GenericAPIView):
         if account in obj.likes.all():
             obj.likes.remove(account)
             obj.save()
-            print(account.likes.all())
         else:
             obj.likes.add(account)
             obj.save()
-            print(account.likes.all())
 
         userLikes = []
         for itinerary in account.likes.all():
@@ -162,7 +160,6 @@ class ItineraryUpdateLikes(GenericAPIView):
             "userLikes": userLikes,
         }
         return Response(data)
-
 
 # TODO: Add a Recommendation list for posts from a user and posts about a city (use filter on
 # queryset instead of all)
