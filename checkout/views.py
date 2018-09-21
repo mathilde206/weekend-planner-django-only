@@ -46,7 +46,6 @@ class OrderCreateView(CreateAPIView):
         serializer = OrderSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         headers = self.get_success_headers(serializer.validated_data)
-        serializer.save(buyer=self.request.user)
 
         try:
             charge = stripe.Charge.create(
@@ -57,6 +56,7 @@ class OrderCreateView(CreateAPIView):
             )
 
             if charge.paid:
+                serializer.save(buyer=self.request.user)
                 return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
             else:
                 error = {"error": "We were unable to take a payment with that card!"}

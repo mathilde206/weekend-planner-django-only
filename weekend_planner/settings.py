@@ -6,13 +6,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEVELOPMENT = os.environ.get('DEVELOPMENT', False)
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
-#
-# if DEVELOPMENT:
-#     DEBUG = True
-# else:
-#     DEBUG = False
 
-DEBUG = True
+if DEVELOPMENT:
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -143,7 +141,6 @@ else:
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
